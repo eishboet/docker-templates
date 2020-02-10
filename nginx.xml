@@ -15,6 +15,7 @@
   </Description>
   <Project>https://www.nginx.com/</Project>
   <Repository>eishboet/nginx</Repository>
+  <Registry>https://hub.docker.com/r/eishboet/nomad</Registry>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment>
