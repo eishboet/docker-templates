@@ -1,61 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Container>
-  <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/nginx.xml</TemplateURL>
-<Beta>False</Beta>
-<Category>Network:Web Network:Proxy</Category>
-<Date>2015-12-05</Date>
+<Container version="0.1">
   <Name>nginx</Name>
-  <Support>https://forums.unraid.net/topic/42784-support-linuxserverio-nginx/</Support>
-  <Overview>Nginx is a web server with a strong focus on high concurrency, performance and low memory usage. It can also act as a reverse proxy server for HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load balancer and an HTTP cache.</Overview>
-  <Description>Nginx is a web server with a strong focus on high concurrency, performance and low memory usage. It can also act as a reverse proxy server for HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load balancer and an HTTP cache..[br]
-  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
-  [b]80[/b] Standard HTTP Port [br]
-  [b]443[/b] Standard HTTPS Port [br]
-  [b]/config[/b]Storing Configuration and the www folder[br]
-  </Description>
-  <Project>https://www.nginx.com/</Project>
-  <Registry>https://hub.docker.com/r/linuxserver/nginx/</Registry>
-  <Repository>linuxserver/nginx</Repository>
-  <BindTime>true</BindTime>
-  <Privileged>false</Privileged>
-  <Environment>
-    <Variable>
-      <Name>PUID</Name>
-      <Value>99</Value>
-    </Variable>
-    <Variable>
-      <Name>PGID</Name>
-      <Value>100</Value>
-    </Variable>
-  </Environment>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>80</HostPort>
-        <ContainerPort>80</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>443</HostPort>
-        <ContainerPort>443</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Version></Version>
-  <WebUI>http://[IP]:[PORT:80]/</WebUI>
-  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/nginx-icon.png</Icon>
-  <ExtraParams></ExtraParams>
-<DonateText>Donations</DonateText>
-<DonateLink>https://www.linuxserver.io/donate</DonateLink>
-<DonateImg>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/donate.png</DonateImg>
-<BaseImage>lsiobase/nginx</BaseImage>
-</Container>
+  <Overview>
+    Nginx is a web server which can also be used as a reverse proxy, load balancer, mail
+    proxy and HTTP cache.
+
+    Nginx is free and open-source software, released under the terms of the 2-clause BSD
+    license. A large fraction of web servers use NGINX,often as a load balancer.
+  </Overview>
+  <Registry>
+    http://localhost:5000/registry/nginx
+  </Registry>
+  <Repository>
+    Docker Registry username and containers name user/containers
+  </Repository>
+  <Privileged>
+    False
+  </Privileged>
+  <Support>
+    URL to the containers support page
+  </Support>
+  <Network>
+      bridge
+  </Network>
+  <WebUI> # Holds a mask for the web management interface of the containers main application
+    http://localhost:[PORT:80]/index.html
+  </WebUI>
+  <Icon>
+    https://github.com/eishboet/docker-templates/tree/master/icons/nginx-icon.png
+  </Icon>
+  <Category>
+    Network:Web, Status:Beta
+  </Category>
+  <Config
+    Type="Path"
+    Name="nginx.conf"
+    Target="/etc/nginx/"
+    Default="/etc/nginx/"
+    Mode="ro"
+    Description="Path to nginx.conf"
+    Required="true">
+      /mnt/usr/appdata/nginx/nginx.conf
+  </Config>
+  <Config
+    Type="Path"
+    Name="fastcgi_params"
+    Target="/etc/nginx/"
+    Default="/etc/nginx/"
+    Mode="ro"
+    Description="fastcgi_params"
+    Required="true">
+      /mnt/usr/appdata/nginx/fastcgi_params
+  </Config>
+  <Config
+    Type="Path"
+    Name="/var/www/html/"
+    Target="/var/www/html/"
+    Default="/var/www/html/"
+    Mode="ro"
+    Description="www folder"
+    Required="true">
+      /mnt/usr/appdata/nginx/www
+  </Config>
+  <Config
+    Type="Port"
+    Name="nginx http"
+    Target="80"
+    Default="80"
+    Mode="tcp"
+    Description="http port 80"
+    Display="always"
+    Required="true">
+      80
+  </Config>
+ </Container>
