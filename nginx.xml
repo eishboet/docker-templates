@@ -50,17 +50,7 @@
     Mode="ro"
     Description="Path to nginx.conf"
     Required="true">
-      /mnt/usr/appdata/nginx/nginx.conf
-  </Config>
-  <Config
-    Type="Path"
-    Name="fastcgi_params"
-    Target="/etc/nginx/"
-    Default="/etc/nginx/"
-    Mode="ro"
-    Description="fastcgi_params"
-    Required="true">
-      /mnt/usr/appdata/nginx/fastcgi_params
+      /mnt/user/appdata/nginx/configuration/nginx.conf
   </Config>
   <Config
     Type="Path"
