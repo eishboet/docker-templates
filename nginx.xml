@@ -11,27 +11,37 @@
   <Registry>
     http://localhost:5000/registry/nginx
   </Registry>
-  <Repository>
-    Docker Registry username and containers name user/containers
-  </Repository>
   <Privileged>
     False
   </Privileged>
-  <Support>
-    URL to the containers support page
-  </Support>
+  <WebUI>
+    http://[IP]:[PORT:80]/
+  </WebUI>
   <Network>
       bridge
   </Network>
-  <WebUI>
-    http://localhost:[PORT:80]/index.html
-  </WebUI>
   <Icon>
     https://github.com/eishboet/docker-templates/tree/master/icons/nginx-icon.png
   </Icon>
   <Category>
     Network:Web, Status:Beta
   </Category>
+  <Config
+    Type="Variable"
+    Name="PUID"
+    Default="99"
+    Description="PUID"
+    Required="true">
+      99
+  </Config>
+  <Config
+    Type="Variable"
+    Name="PGID"
+    Default="100"
+    Description="PGID"
+    Required="true">
+      100
+  </Config>
   <Config
     Type="Path"
     Name="nginx.conf"
