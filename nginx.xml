@@ -8,17 +8,19 @@
     Nginx is free and open-source software, released under the terms of the 2-clause BSD
     license. A large fraction of web servers use NGINX,often as a load balancer.
   </Overview>
+  <Repository>
+    eishboet/docker-nginx
   <Registry>
     http://localhost:5000/registry/nginx
   </Registry>
   <Privileged>
-    False
+    false
   </Privileged>
   <WebUI>
     http://[IP]:[PORT:80]/
   </WebUI>
   <Network>
-      bridge
+    bridge
   </Network>
   <Icon>
     https://github.com/eishboet/docker-templates/tree/master/icons/nginx-icon.png
@@ -32,7 +34,7 @@
     Default="99"
     Description="PUID"
     Required="true">
-      99
+    99
   </Config>
   <Config
     Type="Variable"
@@ -40,7 +42,7 @@
     Default="100"
     Description="PGID"
     Required="true">
-      100
+    100
   </Config>
   <Config
     Type="Path"
@@ -50,7 +52,7 @@
     Mode="ro"
     Description="Path to nginx.conf"
     Required="true">
-      /mnt/user/appdata/nginx/configuration/nginx.conf
+    /mnt/user/appdata/nginx/configuration/nginx.conf
   </Config>
   <Config
     Type="Path"
@@ -60,7 +62,7 @@
     Mode="ro"
     Description="www folder"
     Required="true">
-      /mnt/usr/appdata/nginx/www
+    /mnt/user/appdata/nginx/www
   </Config>
   <Config
     Type="Port"
@@ -68,9 +70,9 @@
     Target="80"
     Default="80"
     Mode="tcp"
-    Description="http port 80"
+    Description="container port"
     Display="always"
     Required="true">
-      80
+    80
   </Config>
  </Container>
