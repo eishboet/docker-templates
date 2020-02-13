@@ -23,7 +23,7 @@
   <Network>
       bridge
   </Network>
-  <WebUI> # Holds a mask for the web management interface of the containers main application
+  <WebUI>
     http://localhost:[PORT:80]/index.html
   </WebUI>
   <Icon>
