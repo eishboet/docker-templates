@@ -10,6 +10,7 @@
   </Overview>
   <Repository>
     eishboet/docker-nginx
+  </Repository>
   <Registry>
     http://localhost:5000/registry/nginx
   </Registry>
