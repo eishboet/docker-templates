@@ -6,7 +6,7 @@
 
     Nginx is free and open-source software, released under the terms of the 2-clause BSD license. A large fraction of web servers use NGINX,often as a load balancer.
   </Overview>
-  <Repository>http://github.com/eishboet/docker-nginx/</Repository>
+  <Repository>registry/nginx</Repository>
   <Registry>http://localhost:5000/registry/nginx</Registry>
   <Privileged>false</Privileged>
   <WebUI>http://[IP]:[PORT:80]/</WebUI>
