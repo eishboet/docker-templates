@@ -2,20 +2,25 @@
 <Container version="0.1">
   <Name>nginx</Name>
   <Overview>
-    Nginx is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
-
-    Nginx is free and open-source software, released under the terms of the 2-clause BSD license. A large fraction of web servers use NGINX,often as a load balancer.
+    Nginx is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache. It is free and open-source software, released under the terms of the 2-clause BSD license.
   </Overview>
-  <Repository>registry/nginx</Repository>
+  <Repository>192.168.0.80:5000/registry/nginx</Repository>
   <Registry>http://localhost:5000/registry/nginx</Registry>
   <Privileged>false</Privileged>
   <WebUI>http://[IP]:[PORT:80]/</WebUI>
-  <Network>bridge<Network>
-  <Icon>https://github.com/eishboet/docker-templates/tree/master/icons/nginx-icon.png</Icon>
-  <Category>Network:Web, Status:Beta</Category>
+  <Network>bridge</Network>
+  <Icon>https://raw.githubusercontent.com/eishboet/docker-templates/master/icons/nginx-icon.png</Icon>
+  <Category>Network:Web</Category>
   <Config Type="Variable" Name="PUID" Default="99" Description="PUID" Required="true">99</Config>
   <Config Type="Variable" Name="PGID" Default="100" Description="PGID" Required="true">100</Config>
-  <Config Type="Path" Name="nginx.conf" Target="/etc/nginx/" Default="/etc/nginx/" Mode="ro" Description="Path to nginx.conf" Required="true">/mnt/user/appdata/nginx/configuration/nginx.conf</Config>
-  <Config Type="Path" Name="/var/www/html/" Target="/var/www/html/" Default="/var/www/html/" Mode="ro" Description="www folder" Required="true">/mnt/user/appdata/nginx/www</Config>
-  <Config Type="Port" Name="nginx http" Target="80" Default="80" Mode="tcp" Description="container port" Display="always" Required="true">80</Config>
+  <Config Type="Path" Name="Location of nginx.conf" Target="/etc/nginx/nginx.conf" Default="/etc/nginx/nginx.conf" Mode="ro" Description="Path to nginx.conf" Required="true">/mnt/user/appdata/nginx/configuration/nginx.conf</Config>
+  <Config Type="Path" Name="Location of www folder" Target="/var/www/html/" Default="/var/www/html/" Mode="ro" Description="www folder" Required="true">/mnt/user/appdata/nginx/www</Config>
+  <Config Type="Path" Name="Nginx access.log" Target="/var/logs/nginx/access.log" Default="/var/logs/nginx/access.log" Mode="rw" Description="Nginx access.log" Required="true">/mnt/user/appdata/nginx/logs/access.log</Config>
+  <Config Type="Path" Name="Nginx error.log" Target="/var/logs/nginx/error.log" Default="/var/logs/nginx/error.log" Mode="rw" Description="Nginx error.log" Required="true">/mnt/user/appdata/nginx/logs/error.log</Config>
+  <Config Type="Path" Name="Site deanenperumal.co.uk access.log" Target="/var/logs/nginx/deanenperumal.co.uk.access.log" Default="/var/logs/nginx/deanenperumal.co.uk.access.log" Mode="rw" Description="deanenperumal.co.uk access.log" Required="true">/mnt/user/appdata/nginx/logs/deanenperumal.co.uk.access.log</Config>
+  <Config Type="Path" Name="Site deanenperumal.co.uk error.log" Target="/var/logs/nginx/deanenperumal.co.uk.error.log" Default="/var/logs/nginx/deanenperumal.co.uk.error.log" Mode="rw" Description="deanenperumal.co.uk error.log" Required="true">/mnt/user/appdata/nginx/logs/deanenperumal.co.uk.error.log</Config>
+  <Config Type="Path" Name="Site plex.deanenperumal.co.uk access.log" Target="/var/logs/nginx/plex.deanenperumal.co.uk.access.log" Default="/var/logs/nginx/plex.deanenperumal.co.uk.access.log" Mode="rw" Description="plex.deanenperumal.co.uk access.log" Required="true">/mnt/user/appdata/nginx/logs/plex.deanenperumal.co.uk.access.log</Config>
+  <Config Type="Path" Name="Site plex.deanenperumal.co.uk error.log" Target="/var/logs/nginx/plex.deanenperumal.co.uk.error.log" Default="/var/logs/nginx/plex.deanenperumal.co.uk.error.log" Mode="rw" Description="plex.deanenperumal.co.uk error.log" Required="true">/mnt/user/appdata/nginx/logs/plex.deanenperumal.co.uk.error.log</Config>
+  <Config Type="Port" Name="HTTP:// port" Target="80" Default="80" Mode="tcp" Description="container port" Display="always" Required="true">80</Config>
+  <Config Type="Port" Name="HTTPS:// port" Target="443" Default="443" Mode="tcp" Description="container port" Display="always" Required="true">443</Config>
 </Container>
