@@ -14,6 +14,7 @@
   <Config Type="Variable" Name="PUID" Default="99" Description="PUID" Required="true">99</Config>
   <Config Type="Variable" Name="PGID" Default="100" Description="PGID" Required="true">100</Config>
   <Config Type="Path" Name="Location of nginx.conf" Target="/etc/nginx/nginx.conf" Default="/etc/nginx/nginx.conf" Mode="ro" Description="Path to nginx.conf" Required="true">/mnt/user/appdata/nginx/configuration/nginx.conf</Config>
+  <Config Type="Path" Name="Location of site conf files" Target="/etc/nginx/conf.d" Default="/etc/nginx/conf.d" Mode="ro" Description="Path to site conf files" Required="true">/mnt/user/appdata/nginx/configuration/sites-available</Config>
   <Config Type="Path" Name="Location of www folder" Target="/var/www/html/" Default="/var/www/html/" Mode="ro" Description="www folder" Required="true">/mnt/user/appdata/nginx/www</Config>
   <Config Type="Path" Name="Nginx access.log" Target="/var/log/nginx/access.log" Default="/var/log/nginx/access.log" Mode="rw" Description="Nginx access.log" Required="true">/mnt/user/appdata/nginx/log/access.log</Config>
   <Config Type="Path" Name="Nginx error.log" Target="/var/log/nginx/error.log" Default="/var/log/nginx/error.log" Mode="rw" Description="Nginx error.log" Required="true">/mnt/user/appdata/nginx/log/error.log</Config>
