@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="0.1">
+  <Name>PHP-7.3 FPM</Name>
+  <Overview>
+    PHP-FPM (FastCGI Process Manager) is an alternative PHP FastCGI implementation with some additional features useful for sites of any size, especially busier sites.
+    <p />These features include:
+
+    <ul>
+      <li>Adaptive process spawning (NEW!)</li>
+      <li>Basic statistics (ala Apache's mod_status) (NEW!)</li>
+      <li>Advanced process management with graceful stop/start</li>
+      <li>Ability to start workers with different uid/gid/chroot/environment and different php.ini (replaces safe_mode)</li>
+      <li>Stdout and stderr logging</li>
+      <li>Emergency restart in case of accidental opcode cache destruction</li>
+      <li>Accelerated upload support</li>
+      <li>Support for a "slowlog"</li>
+      <li>Enhancements to FastCGI, such as fastcgi_finish_request() - a special function to finish request and flush all data while continuing to do something time-consuming (video converting, stats processing, etc.)</li>
+    </ul>
+  </Overview>
+  <Repository>registry/php7.3-fpm</Repository>
+  <Registry>http://localhost:5000/registry/php7.3-fpm</Registry>
+  <Privileged>false</Privileged>
+  <WebUI></WebUI>
+  <Network>bridge<Network>
+  <Icon>https://github.com/eishboet/docker-templates/tree/master/icons/php-icon.png</Icon>
+  <Category>Network:Web</Category>
+  <Config Type="Variable" Name="PUID" Default="99" Description="PUID" Required="true">99</Config>
+  <Config Type="Variable" Name="PGID" Default="100" Description="PGID" Required="true">100</Config>
+  <Config Type="Path" Name="/sock" Target="/sock" Default="/sock" Mode="ro" Description="PHP socket directory" Required="true">/mnt/user/appdata/nginx/php_socket</Config>
+  <Config Type="Path" Name="/var/www/html/" Target="/var/www/html/" Default="/var/www/html/" Mode="ro" Description="www folder" Required="true">/mnt/user/appdata/nginx/www</Config>
+</Container>
