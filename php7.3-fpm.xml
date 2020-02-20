@@ -21,7 +21,7 @@
   <Registry>http://localhost:5000/registry/php7.3-fpm</Registry>
   <Privileged>false</Privileged>
   <WebUI></WebUI>
-  <Network>bridge<Network>
+  <Network>bridge</Network>
   <Icon>https://github.com/eishboet/docker-templates/tree/master/icons/php-icon.png</Icon>
   <Category>Network:Web</Category>
   <Config Type="Variable" Name="PUID" Default="99" Description="PUID" Required="true">99</Config>
