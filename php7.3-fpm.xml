@@ -27,4 +27,6 @@
   <Config Type="Variable" Name="PGID" Default="100" Description="PGID" Required="true">100</Config>
   <Config Type="Path" Name="/sock" Target="/sock" Default="/sock" Mode="ro" Description="PHP socket directory" Required="true">/mnt/user/appdata/php//php_socket</Config>
   <Config Type="Path" Name="/var/www/html/" Target="/var/www/html/" Default="/var/www/html/" Mode="ro" Description="www folder" Required="true">/mnt/user/appdata/nginx/www</Config>
+  <Config Type="Path" Name="/usr/local/etc/php/php.ini" Target="/usr/local/etc/php/php.ini" Default="/usr/local/etc/php/php.ini" Mode="ro" Description="PHP.INI folder" Required="true">/mnt/user/appdata/php/7.3-fpm/php.ini</Config>
+  <Config Type="Path" Name="/usr/local/etc/php-fpm.d/www.conf" Target="/usr/local/etc/php-fpm.d/www.conf" Default="/usr/local/etc/php-fpm.d/www.conf" Mode="ro" Description="WWW.CONF folder" Required="true">/mnt/user/appdata/php/7.3-fpm/www.conf</Config>
 </Container>
