@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="0.1">
+<Name>Redis Server</Name>
+<Overview>Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes with radius queries and streams. Redis has built-in replication, Lua scripting, LRU eviction, transactions and different levels of on-disk persistence, and provides high availability via Redis Sentinel and automatic partitioning with Redis Cluster.</Overview>
+<Repository>localhost:5000/registry/nginx</Repository>
+<Registry>http://localhost:5000/registry/nginx</Registry>
+<Privileged>false</Privileged>
+<Network>bridge</Network>
+<Icon>https://raw.githubusercontent.com/eishboet/docker-templates/master/icons/nginx-icon.png</Icon>
+<Category>Network:Web</Category>
+<Config Type="Variable" Name="PUID" Default="99" Description="PUID" Required="true">99</Config>
+<Config Type="Variable" Name="PGID" Default="100" Description="PGID" Required="true">100</Config>
+<Config Type="Path" Name="Location of nginx.conf" Target="/usr/local/etc/redis/redis.conf" Default="/usr/local/etc/redis/redis.conf" Mode="ro" Description="Path to redis.conf" Required="true">/mnt/user/appdata/redis/conf.d/redis.conf</Config>
+<Config Type="Port" Name="redis server port" Target="6379" Default="6379" Mode="tcp" Description="redis-server port" Display="always" Required="true">6379</Config>
+</Container>
