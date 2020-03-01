@@ -5,7 +5,6 @@
 <Repository>localhost:5000/registry/nginx</Repository>
 <Registry>http://localhost:5000/registry/nginx</Registry>
 <Privileged>false</Privileged>
-<WebUI>http://[IP]:[PORT:80]/</WebUI>
 <Network>bridge</Network>
 <Icon>https://raw.githubusercontent.com/eishboet/docker-templates/master/icons/nginx-icon.png</Icon>
 <Category>Network:Web</Category>
