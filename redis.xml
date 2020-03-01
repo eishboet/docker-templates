@@ -6,7 +6,7 @@
 <Registry>http://localhost:5000/registry/nginx</Registry>
 <Privileged>false</Privileged>
 <Network>bridge</Network>
-<Icon>https://raw.githubusercontent.com/eishboet/docker-templates/master/icons/nginx-icon.png</Icon>
+<Icon>https://raw.githubusercontent.com/eishboet/docker-templates/master/icons/redis-cube.png</Icon>
 <Category>Network:Web</Category>
 <Config Type="Variable" Name="PUID" Default="99" Description="PUID" Required="true">99</Config>
 <Config Type="Variable" Name="PGID" Default="100" Description="PGID" Required="true">100</Config>
