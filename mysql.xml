@@ -10,7 +10,7 @@ will be accepted on technical merit. Recent new functionality includes advanced 
 Cluster 4, compatibility features with Oracle Database and Temporal Data Tables, allowing one to query
 the data as it stood at any point in the past.</Overview>
 <Repository>localhost:5000/registry/mariadb</Repository>
-<Registry>http://localhost:5000/registry/mariadb</Registry>
+<Registry>localhost:5000/registry/mariadb</Registry>
 <Privileged>false</Privileged>
 <Network>bridge</Network>
 <Icon>https://raw.githubusercontent.com/eishboet/docker-templates/master/icons/mariadb-icon.png</Icon>
@@ -20,6 +20,6 @@ the data as it stood at any point in the past.</Overview>
 <Config Type="Path" Name="mysql.conf" Target="/etc/mysql/my.cnf" Default="/etc/mysql/my.cnf" Mode="ro" Description="Path to my.cnf" Required="true">/mnt/user/appdata/mysql/my.cnf</Config>
 <Config Type="Path" Name="conf.d" Target="/etc/mysql/conf.d/" Default="/etc/mysql/conf.d/" Mode="ro" Description="Path to conf.d" Required="true">/mnt/user/appdata/mysql/conf.d/</Config>
 <Config Type="Port" Name="mysql server port" Target="3306" Default="3306" Mode="tcp" Description="mysql-server port" Display="always" Required="true">3306</Config>
-<Config Type="Variable" Name="MYSQL_ROOT_PASSWORD" Default="" Description="MYSQL_ROOT_PASSWORD" Required="true" Mask="true"></Config>
+<Config Type="Variable" Name="MYSQL_ROOT_PASSWORD" Default="" Description="MYSQL_ROOT_PASSWORD" Required="true" Mask="true">MYSQL_ROOT_PASSWORD</Config>
 
 </Container>
