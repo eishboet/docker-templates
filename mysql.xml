@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="0.1">
+<Name>mariadb</Name>
+<Overview>MariaDB Server is one of the most popular open source relational databases. It’s made by the original
+developers of MySQL and guaranteed to stay open source. It is part of most cloud offerings and the default in
+most Linux distributions.
+
+It is built upon the values of performance, stability, and openness, and MariaDB Foundation ensures contributions
+will be accepted on technical merit. Recent new functionality includes advanced clustering with Galera
+Cluster 4, compatibility features with Oracle Database and Temporal Data Tables, allowing one to query
+the data as it stood at any point in the past.</Overview>
+<Repository>localhost:5000/registry/mariadb</Repository>
+<Registry>localhost:5000/registry/mariadb</Registry>
+<Privileged>false</Privileged>
+<Network>bridge</Network>
+<Icon>https://raw.githubusercontent.com/eishboet/docker-templates/master/icons/mariadb-icon.png</Icon>
+<Category>Network:Web</Category>
+<Config Type="Variable" Name="PUID" Default="99" Description="PUID" Required="true">99</Config>
+<Config Type="Variable" Name="PGID" Default="100" Description="PGID" Required="true">100</Config>
+<Config Type="Path" Name="mysql.conf" Target="/etc/mysql/my.cnf" Default="/etc/mysql/my.cnf" Mode="ro" Description="Path to my.cnf" Required="true">/mnt/user/appdata/mysql/my.cnf</Config>
+<Config Type="Path" Name="conf.d" Target="/etc/mysql/conf.d/" Default="/etc/mysql/conf.d/" Mode="ro" Description="Path to conf.d" Required="true">/mnt/user/appdata/mysql/conf.d/</Config>
+<Config Type="Port" Name="mysql server port" Target="3306" Default="3306" Mode="tcp" Description="mysql-server port" Display="always" Required="true">3306</Config>
+<Config Type="Variable" Name="MYSQL_ROOT_PASSWORD" Default="" Description="MYSQL_ROOT_PASSWORD" Required="true" Mask="true">MYSQL_ROOT_PASSWORD</Config>
+
+</Container>
