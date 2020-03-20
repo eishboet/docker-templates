@@ -3,8 +3,8 @@
 <Name>Docker Registry</Name>
 <Overview>The Registry is a stateless, highly scalable server side application that stores and lets you distribute
   Docker images. The Registry is open-source, under the permissive Apache license.</Overview>
-<Repository>https://registry.deanenperumal.co.uk/registry/mariadb</Repository>
-<Registry>https://registry.deanenperumal.co.uk/registry/mariadb</Registry>
+<Repository></Repository>
+<Registry></Registry>
 <Privileged>false</Privileged>
 <Network>bridge</Network>
 <Icon>https://raw.githubusercontent.com/eishboet/docker-templates/master/icons/docker-icon.png</Icon>
