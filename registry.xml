@@ -9,8 +9,8 @@
 <Network>bridge</Network>
 <Icon>https://raw.githubusercontent.com/eishboet/docker-templates/master/icons/docker-icon.png</Icon>
 <Category>Network:Web</Category>
-<Config Type="Variable" Name="PUID" Default="99" Description="PUID" Required="true">99</Config>
-<Config Type="Variable" Name="PGID" Default="100" Description="PGID" Required="true">100</Config>
+<Config Type="Variable" Name="PUID" Key="PUID"Default="99" Description="PUID" Required="true">99</Config>
+<Config Type="Variable" Name="PGID" Key="PGID" Default="100" Description="PGID" Required="true">100</Config>
 <Config Type="Path" Name="Registry Storage Location" Target="/var/lib/registry" Default="/var/lib/registry" Mode="rw" Description="Path to registry storage" Required="true">/mnt/user/registry</Config>
 <Config Type="Port" Name="Server port" Target="5000" Default="5000" Mode="tcp" Description="Server port" Display="always" Required="true">5000</Config>
 <Config Type="Variable" Name="name" Default="" Description="Registry name" Required="true">registry</Config>
