@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="0.1">
+<Name>Docker Registry</Name>
+<Overview>The Registry is a stateless, highly scalable server side application that stores and lets you distribute
+  Docker images. The Registry is open-source, under the permissive Apache license.</Overview>
+<Repository>https://registry.deanenperumal.co.uk/registry/mariadb</Repository>
+<Registry>https://registry.deanenperumal.co.uk/registry/mariadb</Registry>
+<Privileged>false</Privileged>
+<Network>bridge</Network>
+<Icon>https://raw.githubusercontent.com/eishboet/docker-templates/master/icons/docker-icon.png</Icon>
+<Category>Network:Web</Category>
+<Config Type="Variable" Name="PUID" Default="99" Description="PUID" Required="true">99</Config>
+<Config Type="Variable" Name="PGID" Default="100" Description="PGID" Required="true">100</Config>
+<Config Type="Path" Name="Registry Storage Location" Target="/var/lib/registry" Default="/var/lib/registry" Mode="rw" Description="Path to registry storage" Required="true">/mnt/user/registry</Config>
+<Config Type="Port" Name="Server port" Target="5000" Default="5000" Mode="tcp" Description="Server port" Display="always" Required="true">5000</Config>
+<Config Type="Variable" Name="name" Default="" Description="Registry name" Required="true">registry</Config>
+<Config Type="Variable" Name="REGISTRY_HTTP_ADDR" Default="REGISTRY_HTTP_ADDR" Description="Registry name" Required="true">0.0.0.0:5000</Config>
+<Config Type="Path" Name="REGISTRY_HTTP_TLS_CERTIFICATE" Default="REGISTRY_HTTP_TLS_CERTIFICATE" Description="SSL Certificate" Required="true"></Config>
+<Config Type="Path" Name="REGISTRY_HTTP_TLS_KEY" Default="REGISTRY_HTTP_TLS_KEY" Description="SSL Certificate Key" Required="true"></Config>
+</Container>
