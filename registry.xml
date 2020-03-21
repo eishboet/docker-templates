@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="0.1">
 <Name>Docker Registry</Name>
+<Date>2020-03-20</Date>
 <Overview>The Registry is a stateless, highly scalable server side application that stores and lets you distribute
   Docker images. The Registry is open-source, under the permissive Apache license.</Overview>
-<Repository>eishboet/registry</Repository>
+<Repository>registry.deanenperumal.co.uk/registry</Repository>
 <Registry>https://hub.docker.com/_/registry</Registry>
 <Privileged>false</Privileged>
 <Network>bridge</Network>
 <Icon>https://raw.githubusercontent.com/eishboet/docker-templates/master/icons/docker-icon.png</Icon>
 <Category>Network:Web</Category>
-<Config Type="Variable" Name="PUID" Key="PUID"Default="99" Description="PUID" Required="true">99</Config>
+<Config Type="Variable" Name="PUID" Key="PUID" Default="99" Description="PUID" Required="true">99</Config>
 <Config Type="Variable" Name="PGID" Key="PGID" Default="100" Description="PGID" Required="true">100</Config>
 <Config Type="Path" Name="Registry Storage Location" Target="/var/lib/registry" Default="/var/lib/registry" Mode="rw" Description="Path to registry storage" Required="true">/mnt/user/registry</Config>
 <Config Type="Path" Name="Certificate Location" Target="/certs" Default="/certs" Mode="ro" Description="Path to SSL certificates" Required="true">/mnt/user/appdata/certs</Config>
