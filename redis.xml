@@ -2,8 +2,8 @@
 <Container version="0.1">
 <Name>Redis Server</Name>
 <Overview>Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes with radius queries and streams. Redis has built-in replication, Lua scripting, LRU eviction, transactions and different levels of on-disk persistence, and provides high availability via Redis Sentinel and automatic partitioning with Redis Cluster.</Overview>
-<Repository>localhost:5000/registry/redis-server</Repository>
-<Registry>http://localhost:5000/registry/redis-server</Registry>
+<Repository>library/redis</Repository>
+<Registry>https://hub.docker.com/_/redis/</Registry>
 <Privileged>false</Privileged>
 <Network>bridge</Network>
 <Icon>https://raw.githubusercontent.com/eishboet/docker-templates/master/icons/redis-cube.png</Icon>
