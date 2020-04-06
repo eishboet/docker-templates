@@ -4,8 +4,8 @@
   <Overview>
     Nginx is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache. It is free and open-source software, released under the terms of the 2-clause BSD license.
   </Overview>
-  <Repository>192.168.0.80:5000/registry/nginx</Repository>
-  <Registry>http://localhost:5000/registry/nginx</Registry>
+  <Repository>eishboet/nginx</Repository>
+  <Registry>https://hub.docker.com/r/eishboet/nginx</Registry>
   <Privileged>false</Privileged>
   <WebUI>http://[IP]:[PORT:80]/</WebUI>
   <Network>bridge</Network>
@@ -13,13 +13,6 @@
   <Category>Network:Web</Category>
   <Config Type="Variable" Name="PUID" Default="99" Description="PUID" Required="true">99</Config>
   <Config Type="Variable" Name="PGID" Default="100" Description="PGID" Required="true">100</Config>
-  <Config Type="Path" Name="Location of nginx.conf" Target="/etc/nginx/nginx.conf" Default="/etc/nginx/nginx.conf" Mode="ro" Description="Path to nginx.conf" Required="true">/mnt/user/appdata/nginx/configuration/nginx.conf</Config>
-  <Config Type="Path" Name="Location of site conf files" Target="/etc/nginx/conf.d" Default="/etc/nginx/conf.d" Mode="ro" Description="Path to site conf files" Required="true">/mnt/user/appdata/nginx/configuration/sites</Config>
-  <Config Type="Path" Name="Location of www folder" Target="/var/www/html/" Default="/var/www/html/" Mode="ro" Description="www folder" Required="true">/mnt/user/appdata/nginx/www</Config>
-  <Config Type="Path" Name="Nginx access.log" Target="/var/log/nginx/access.log" Default="/var/log/nginx/access.log" Mode="rw" Description="Nginx access.log" Required="true">/mnt/user/appdata/nginx/log/access.log</Config>
-  <Config Type="Path" Name="Nginx error.log" Target="/var/log/nginx/error.log" Default="/var/log/nginx/error.log" Mode="rw" Description="Nginx error.log" Required="true">/mnt/user/appdata/nginx/log/error.log</Config>
-  <Config Type="Path" Name="Site deanenperumal.co.uk access.log" Target="/var/log/nginx/deanenperumal.co.uk.access.log" Default="/var/log/nginx/deanenperumal.co.uk.access.log" Mode="rw" Description="deanenperumal.co.uk access.log" Required="true">/mnt/user/appdata/nginx/log/deanenperumal.co.uk.access.log</Config>
-  <Config Type="Path" Name="Site deanenperumal.co.uk error.log" Target="/var/log/nginx/deanenperumal.co.uk.error.log" Default="/var/log/nginx/deanenperumal.co.uk.error.log" Mode="rw" Description="deanenperumal.co.uk error.log" Required="true">/mnt/user/appdata/nginx/log/deanenperumal.co.uk.error.log</Config>
   <Config Type="Port" Name="HTTP:// port" Target="80" Default="80" Mode="tcp" Description="container port" Display="always" Required="true">80</Config>
   <Config Type="Port" Name="HTTPS:// port" Target="443" Default="443" Mode="tcp" Description="container port" Display="always" Required="true">443</Config>
 </Container>
