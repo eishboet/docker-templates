@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="0.1">
-  <Name>PHP7.3-FPM</Name>
+  <Name>php7.3-fpm</Name>
   <Overview>
     PHP-FPM (FastCGI Process Manager) is an alternative PHP FastCGI implementation with some additional features useful for sites of any size, especially busier sites.
     <p />These features include:
@@ -17,16 +17,13 @@
       <li>Enhancements to FastCGI, such as fastcgi_finish_request() - a special function to finish request and flush all data while continuing to do something time-consuming (video converting, stats processing, etc.)</li>
     </ul>
   </Overview>
-  <Repository>localhost:5000/registry/php7.3-fpm</Repository>
-  <Registry>http://localhost:5000/registry/php7.3-fpm</Registry>
+  <Repository>eishboet/php7.3-fpm</Repository>
+  <Registry>https://hub.docker.com/r/eishboet/php7.3-fpm</Registry>
   <Privileged>false</Privileged>
   <WebUI></WebUI>
   <Icon>https://raw.githubusercontent.com/eishboet/docker-templates/master/icons/php-icon.png</Icon>
   <Category>Network:Web</Category>
   <Config Type="Variable" Name="PUID" Default="99" Description="PUID" Required="true">99</Config>
   <Config Type="Variable" Name="PGID" Default="100" Description="PGID" Required="true">100</Config>
-  <Config Type="Path" Name="/sock" Target="/sock" Default="/sock" Mode="ro" Description="PHP socket directory" Required="true">/mnt/user/appdata/php/gphp_socket</Config>
-  <Config Type="Path" Name="/var/www/html/" Target="/var/www/html/" Default="/var/www/html/" Mode="ro" Description="www folder" Required="true">/mnt/user/appdata/nginx/www</Config>
-  <Config Type="Path" Name="/usr/local/etc/php/php.ini" Target="/usr/local/etc/php/php.ini" Default="/usr/local/etc/php/php.ini" Mode="ro" Description="PHP.INI folder" Required="true">/mnt/user/appdata/php/7.3-fpm/php.ini</Config>
-  <Config Type="Path" Name="/usr/local/etc/php-fpm.d/www.conf" Target="/usr/local/etc/php-fpm.d/www.conf" Default="/usr/local/etc/php-fpm.d/www.conf" Mode="ro" Description="WWW.CONF folder" Required="true">/mnt/user/appdata/php/7.3-fpm/www.conf</Config>
+  <Config Type="Path" Name="/usr/local/etc" Target="/usr/local/etc" Default="/usr/local/etc" Mode="rw" Description="php config folder" Required="true">/mnt/user/appdata/php/7.3-fpm/</Config>
 </Container>

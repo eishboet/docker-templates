@@ -15,4 +15,6 @@
   <Config Type="Variable" Name="PGID" Default="100" Description="PGID" Required="true">100</Config>
   <Config Type="Port" Name="HTTP:// port" Target="80" Default="80" Mode="tcp" Description="container port" Display="always" Required="true">80</Config>
   <Config Type="Port" Name="HTTPS:// port" Target="443" Default="443" Mode="tcp" Description="container port" Display="always" Required="true">443</Config>
+  <Config Type="Path" Name="/config" Target="/config" Default="/config" Mode="rw" Description="nginx config folder" Required="true">/mnt/user/appdata/nginx/config</Config>
+  <Config Type="Path" Name="/www" Target="/www" Default="/www" Mode="rw" Description="www folder" Required="true">/mnt/user/appdata/nginx/www</Config>
 </Container>
