@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="0.1">
+  <Name>nginx</Name>
+  <Overview>
+    Nginx is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache. It is free and open-source software, released under the terms of the 2-clause BSD license.
+  </Overview>
+  <Repository>eishboet/s6-nginx</Repository>
+  <Registry>https://hub.docker.com/r/eishboet/nginx</Registry>
+  <Privileged>false</Privileged>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <Network>bridge</Network>
+  <Icon>https://raw.githubusercontent.com/eishboet/docker-templates/master/icons/nginx-icon.png</Icon>
+  <Category>Network:Web</Category>
+  <Config Type="Variable" Name="PUID" Default="99" Description="PUID" Required="true">99</Config>
+  <Config Type="Variable" Name="PGID" Default="100" Description="PGID" Required="true">100</Config>
+  <Config Type="Port" Name="HTTP:// port" Target="80" Default="80" Mode="tcp" Description="container port" Display="always" Required="true">80</Config>
+  <Config Type="Port" Name="HTTPS:// port" Target="443" Default="443" Mode="tcp" Description="container port" Display="always" Required="true">443</Config>
+  <Config Type="Path" Name="config path" Target="/config/" Default="/config/" Mode="rw" Description="Path to nginx config directory" Required="true">/mnt/user/appdata/nginx/config</Config>
+  <Config Type="Path" Name="www path" Target="/config/" Default="/www/" Mode="rw" Description="Path to nginx www directory" Required="true">/mnt/user/appdata/nginx/www</Config>
+</Container>
