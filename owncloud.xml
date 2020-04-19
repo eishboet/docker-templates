@@ -2,8 +2,8 @@
 <Container version="0.1">
   <Name>owncloud</Name>
   <Overview>
-    </Overview>
-  <Repository>eishboet/owncloud/Repository>
+  </Overview>
+  <Repository>eishboet/owncloud</Repository>
   <Registry>https://hub.docker.com/r/eishboet/owncloud</Registry>
   <Privileged>false</Privileged>
   <WebUI>http://[IP]:[PORT:80]/</WebUI>
