@@ -25,5 +25,5 @@
   <Category>Network:Web</Category>
   <Config Type="Variable" Name="PUID" Default="99" Description="PUID" Required="true">99</Config>
   <Config Type="Variable" Name="PGID" Default="100" Description="PGID" Required="true">100</Config>
-  <Config Type="Path" Name="/usr/local/etc" Target="/usr/local/etc" Default="/usr/local/etc" Mode="rw" Description="php config folder" Required="true">/mnt/user/appdata/php/7.3-fpm/</Config>
+  <Config Type="Path" Name="/usr/local/etc" Target="/usr/local/etc" Default="/usr/local/etc" Mode="rw" Description="php config folder" Required="true">/mnt/user/appdata/config/php/7.3-fpm/</Config>
 </Container>
