@@ -2,7 +2,7 @@
 <Container version="0.1">
 <Name>RedisServer</Name>
 <Overview>Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes with radius queries and streams. Redis has built-in replication, Lua scripting, LRU eviction, transactions and different levels of on-disk persistence, and provides high availability via Redis Sentinel and automatic partitioning with Redis Cluster.</Overview>
-<Repository>registry.deanenperumal.co.uk/redis</Repository>
+<Repository>docker-library/redis</Repository>
 <Registry>https://hub.docker.com/_/redis/</Registry>
 <Privileged>false</Privileged>
 <Network>bridge</Network>
@@ -10,6 +10,7 @@
 <Category>Network:Web</Category>
 <Config Type="Variable" Name="PUID" Default="99" Description="PUID" Required="true">99</Config>
 <Config Type="Variable" Name="PGID" Default="100" Description="PGID" Required="true">100</Config>
-<Config Type="Path" Name="Location of redis.conf" Target="/usr/local/etc/redis/redis.conf" Default="/usr/local/etc/redis/redis.conf" Mode="ro" Description="Path to redis.conf" Required="true">/mnt/user/appdata/redis/conf.d/redis.conf</Config>
+<Config Type="Path" Name="Volume" Target="/usr/local/etc/redis" Default="/usr/local/etc/redis" Mode="ro" Description="Path to redis.conf" Required="true">/mnt/user/appdata/config/redis</Config>
 <Config Type="Port" Name="redis server port" Target="6379" Default="6379" Mode="tcp" Description="redis-server port" Display="always" Required="true">6379</Config>
+<Config Type="Variable" Name="" Default="" Description="Location of redis.conf" Required="true">/usr/local/etc/redis/redis.conf</Config>
 </Container>
