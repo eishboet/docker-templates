@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <TemplateURL>https://github.com/eishboet/docker-templates/registry.xml</TemplateURL>
+  <Date>2021-03-28</Date>
+  <Beta>False</Beta>
+  <Category>Network:Web</Category>
+  <Name>MariaDB</Name>
+  <Project>https://github.com/docker/distribution</Project>
+  <Description>
+    Docker Registry is used to store and distribute Docker images using HTTP API. This allows you host your own private Registry and store your images. Uses official Docker Registry image @ https://hub.docker.com/_/registry/
+    [br][br]
+
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]/mnt/user/appdata/registry[/b] This is where Registry will store it's data.[br]
+    [b]Port 5000[/b] Default connection port[br]
+  </Description>
+  <Overview>
+    MariaDB Server is one of the most popular open source relational databases. It’s made by the original
+    developers of MySQL and guaranteed to stay open source. It is part of most cloud offerings and the default in
+    most Linux distributions.
+
+    It is built upon the values of performance, stability, and openness, and MariaDB Foundation ensures contributions
+    will be accepted on technical merit. Recent new functionality includes advanced clustering with Galera
+    Cluster 4, compatibility features with Oracle Database and Temporal Data Tables, allowing one to query
+    the data as it stood at any point in the past.
+  </Overview>
+  <Registry>registry.deanenperumal.co.uk/mariadb</Registry>
+  <GitHub></GitHub>
+  <Repository>docker.io/library/mariadb:latest</Repository>
+  <Support></Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5000</HostPort>
+        <ContainerPort>5000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Network Default="bridge">bridge</Network>
+  <Environment/>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/registry</HostDir>
+      <ContainerDir>/var/lib/registry</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI/>
+  <Icon>https://raw.githubusercontent.com/eishboet/docker-templates/master/icons/mariadb-icon.png</Icon>
+  <ExtraParams></ExtraParams>
+  <Config Type="Variable" Name="PUID" Default="99" Description="PUID" Required="true">99</Config>
+  <Config Type="Variable" Name="PGID" Default="100" Description="PGID" Required="true">100</Config>
+  <Config Type="Path" Name="mysql config dir" Target="/etc/mysql" Default="/etc/mysql" Mode="rw" Description="Path to mariaDB config folder" Required="true">/mnt/user/appdata/config/mysql</Config>
+  <Config Type="Port" Name="MariaDB server port" Target="3306" Default="3306" Mode="tcp" Description="mariadb-server port" Display="always" Required="true">3306</Config>
+  <Config Type="Variable" Name="MYSQL_ROOT_PASSWORD" Default="" Description="MYSQL_ROOT_PASSWORD" Required="true" Mask="true">MYSQL_ROOT_PASSWORD</Config>
+</Container>
