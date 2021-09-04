@@ -9,8 +9,8 @@ It is built upon the values of performance, stability, and openness, and MariaDB
 will be accepted on technical merit. Recent new functionality includes advanced clustering with Galera
 Cluster 4, compatibility features with Oracle Database and Temporal Data Tables, allowing one to query
 the data as it stood at any point in the past.</Overview>
-<Repository>localhost:5000/registry/mariadb</Repository>
-<Registry>localhost:5000/registry/mariadb</Registry>
+<Repository>docker.io/library/mariadb:latest</Repository>
+<Registry>https://hub.docker.com/_/mariadb</Registry>
 <Privileged>false</Privileged>
 <Network>bridge</Network>
 <Icon>https://raw.githubusercontent.com/eishboet/docker-templates/master/icons/mariadb-icon.png</Icon>
