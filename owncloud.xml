@@ -14,6 +14,11 @@
   <Config Type="Variable" Name="PGID" Default="100" Description="PGID" Required="true">100</Config>
   <Config Type="Port" Name="HTTP:// port" Target="80" Default="80" Mode="tcp" Description="container port" Display="always" Required="true">80</Config>
   <Config Type="Port" Name="HTTPS:// port" Target="443" Default="443" Mode="tcp" Description="container port" Display="always" Required="true">443</Config>
+<<<<<<< HEAD
   <Config Type="Path" Name="/config/" Target="/config/" Default="/config/" Mode="rw" Description="nginx config folder" Required="true">/mnt/user/appdata/ownCloud/config/</Config>
   <Config Type="Path" Name="/data/" Target="/config/" Default="/config/" Mode="rw" Description="nginx config folder" Required="true">/mnt/user/appdata/ownCloud/config/</Config>
+=======
+  <Config Type="Path" Name="/config/" Target="/config/" Default="/config/" Mode="rw" Description="owncloud config folder" Required="true">/mnt/user/appdata/ownCloud/</Config>
+  <Config Type="Path" Name="/config/www/" Target="/data/" Default="/data/" Mode="rw" Description="data folder" Required="true">/mnt/user/owncloud_test/data/</Config>
+>>>>>>> da23e8247d5030c54760bacb54b4c14c6b91b9f0
 </Container>
