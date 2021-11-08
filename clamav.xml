@@ -15,7 +15,7 @@
     ClamAV® is an open-source antivirus engine for detecting trojans, viruses, malware and other
     malicious threats.
   </Overview>
-  <Registry>https://registry.hub.docker.com/_/clamav/clamav</Registry>
+  <Registry>https://registry.hub.docker.com/r/clamav/clamav</Registry>
   <Repository>docker.io/library/clamav:latest</Repository>
   <Support></Support>
   <BindTime>true</BindTime>
