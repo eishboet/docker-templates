@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <TemplateURL>https://github.com/eishboet/docker-templates/registry.xml</TemplateURL>
+  <Date>2020-03-20</Date>
+  <Beta>False</Beta>
+  <Category>Cloud: Network:Management Productivity: Tools:</Category>
+  <Name>ClamAV</Name>
+  <Project>https://github.com/docker/distribution</Project>
+  <Description>
+    ClamAV® is an open-source antivirus engine for detecting trojans, viruses, malware and other
+    malicious threats.
+    [br][br]
+  </Description>
+  <Overview>
+    ClamAV® is an open-source antivirus engine for detecting trojans, viruses, malware and other
+    malicious threats.
+  </Overview>
+  <Registry>https://registry.hub.docker.com/_/clamav/</Registry>
+  <GitHub>https://github.com/docker/distribution-library-image</GitHub>
+  <Repository>docker.io/library/clamav:latest</Repository>
+  <Support></Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3110</HostPort>
+        <ContainerPort>3110</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Network Default="bridge">bridge</Network>
+  <Environment/>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/clamav</HostDir>
+      <ContainerDir>/var/lib/clamav</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI/>
+  <Icon>https://raw.githubusercontent.com/eishboet/docker-templates/master/icons/docker-icon.png</Icon>
+  <ExtraParams></ExtraParams>
+  <Config Type="Path" Name="Clamav Virus Definition Storage Path" Target="/var/lib/clamav" Default="/mnt/user/appdata/clamav" Mode="rw" Display="advanced-hide" Required="true" Description="This is where Clamav will store it's virus definitions.">/mnt/user/appdata/clamav</Config>
+  <Config Type="Port" Name="Clamd Port" Target="3110" Default="3110" Mode="tcp" Display="always-hide" Required="true" Description="This is the Clamd TCP port.">3110</Config>
+</Container>
